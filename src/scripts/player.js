@@ -160,7 +160,7 @@ document.addEventListener('click', (event) => {
         elementShow.style.display = 'flex'
 
 
-        document.querySelector("html").style.overflowY = "none";
+        document.querySelector("html").style.overflowY = "hidden";
 
         const song = Object.values(Songs).find(song => song.displayName === title);
 
@@ -183,7 +183,7 @@ closeBtn.addEventListener('click', () => {
 
     elementShow.style.display = 'block'
 
-    document.querySelector("html").style.overflowY = "visible";
+    document.querySelector("html").style.overflowY = "scroll";
     music.pause();
 })
 
