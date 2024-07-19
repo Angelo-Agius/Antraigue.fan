@@ -14,7 +14,7 @@ const prevBtn = document.getElementById('prev'),
 
 const music = new Audio();
 
-const ytSongs = [
+const Songs = [
     {
         path: '../assets/audios/les_main_d_or.mp3',
         displayName: "Les main d'or",
@@ -26,7 +26,7 @@ const ytSongs = [
         displayName: "Des bisous",
         cover: '../assets/imgs/des_bisous.jpg',
         artist: 'Hervé Antraique',
-    },{
+    }, {
         path: '../assets/audios/souk_hallydien.mp3',
         displayName: "Souk Hallydien",
         cover: '../assets/imgs/souk_hallydien.jpg',
@@ -49,7 +49,7 @@ const ytSongs = [
         displayName: "Sur les quais",
         cover: '../assets/imgs/sur_les_quais.jpg',
         artist: 'Hervé Antraique',
-    },{
+    }, {
         path: '../assets/audios/ma.mp3',
         displayName: "Ma",
         cover: '../assets/imgs/ma.jpg',
@@ -66,7 +66,19 @@ const ytSongs = [
         displayName: "Il est où l'amour",
         cover: '../assets/imgs/il_est_ou_l_amour.jpg',
         artist: 'Hervé Antraique',
-    }
+    },
+    {
+        path: '../assets/audios/ai-covers/herve.mp3',
+        displayName: "Hervé",
+        cover: '../assets/imgs/ai-covers/herve.jpg',
+        artist: 'Hervé Antraique',
+    },
+    {
+        path: '../assets/audios/ai-covers/rap_d_herve.mp3',
+        displayName: "Rap d'Hervé",
+        cover: '../assets/imgs/ai-covers/rap_d_herve.jpg',
+        artist: 'Hervé Antraique',
+    },
 ];
 
 
@@ -103,8 +115,8 @@ function loadMusic(song) {
 }
 
 function changeMusic(direction) {
-    musicIndex = (musicIndex + direction + ytSongs.length) % ytSongs.length;
-    loadMusic(ytSongs[musicIndex]);
+    musicIndex = (musicIndex + direction + Songs.length) % Songs.length;
+    loadMusic(Songs[musicIndex]);
     playMusic();
 }
 
@@ -150,13 +162,13 @@ document.addEventListener('click', (event) => {
 
         document.querySelector("html").style.overflowY = "none";
 
-        const song = Object.values(ytSongs).find(song => song.displayName === title);
-    
+        const song = Object.values(Songs).find(song => song.displayName === title);
+
         if (song) {
             loadMusic(song);
             playMusic();
         } else {
-            console.error("Chanson non trouvée dans ytSongs !");
+            console.error("Chanson non trouvée dans Songs !");
         }
     }
 })
@@ -182,4 +194,4 @@ music.addEventListener('ended', () => changeMusic(1));
 music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
 
-loadMusic(ytSongs[musicIndex]);
+loadMusic(Songs[musicIndex]);

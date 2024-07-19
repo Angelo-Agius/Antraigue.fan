@@ -4,7 +4,7 @@
 }
 
 body {
-    margin: 0;
+    margin: 0px;
     font-family: 'Noto-Sans', sans-serif;
     font-size: 12px;
     min-height: 100vh;
@@ -135,11 +135,6 @@ body {
     margin-right: 0px;
 }
 
-.discover {
-    padding: 10px;
-    padding-right: 0;
-}
-
 .discover h2 {
     display: flex;
     font-size: 25px;
@@ -199,6 +194,7 @@ html *::-webkit-scrollbar-thumb {
     border-radius: 15px;
     margin-left: 20px;
     margin-bottom: 40px;
+    max-width: 150px;
     transition: all 0.5s ease;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
@@ -208,11 +204,21 @@ html *::-webkit-scrollbar-thumb {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
 }
 
+.ai-not-available {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 100px 30px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 900px) {
-    .discover {
-        padding: 10px;
-        padding-right: 0;
-    }
 
     .discover h2 {
         display: flex;
@@ -232,5 +238,17 @@ html *::-webkit-scrollbar-thumb {
     #yt-title,
     #ai-title {
         font-size: 15px;
+    }
+
+    .ai-not-available {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 90px 40px;
+        height: 20px;
     }
 }
