@@ -3,12 +3,11 @@
     src: url(../assets/fonts/NotoSans-Regular.ttf);
 }
 
-* {
-    font-family: "Noto-Sans", sans-serif;
-    margin: 0px;
-    padding: 0px;
-}
-
 body {
-    color: black;
+    margin: 0;
+    font-family: 'Noto-Sans', sans-serif;
+    font-size: 12px;
+    min-height: 100vh;
+    background-color: #303030;
+    color: white;
 }
