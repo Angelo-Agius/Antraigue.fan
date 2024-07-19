@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Noto-Sans";
+    src: url(../assets/fonts/NotoSans-Regular.ttf);
+}
+
+* {
+    font-family: "Noto-Sans", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    color: black;
+}
