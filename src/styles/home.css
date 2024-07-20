@@ -11,3 +11,43 @@ body {
     background-color: #303030;
     color: white;
 }
+
+.presentation{
+    background-color: rgba(0 , 0, 0, 0.5);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.stats{
+    padding: 0px 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+#stats{
+    background-color: rgba(0 , 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h3{
+    margin: 0px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
