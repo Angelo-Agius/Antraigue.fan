@@ -16,8 +16,8 @@ class CustomFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <h6>
-            © Copyright 2024-2040, Antraigue Vevo <br>
-            Source code by AGIUS Angelo <br>
+            © Copyright 2024-2040, AGIUS Angelo<br>
+            Source code by <a href="https://www.instagram.com/angelochezinsta/" target="_blank">AGIUS Angelo</a><br>
             Powered by <a href="https://github.com" target="_blank">GitHub</a>
         </h6>
         `
