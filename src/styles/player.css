@@ -206,7 +206,7 @@ html *::-webkit-scrollbar-thumb {
 
 .ai-not-available {
     position: absolute;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1;
@@ -242,7 +242,7 @@ html *::-webkit-scrollbar-thumb {
 
     .ai-not-available {
         position: absolute;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         z-index: 1;

@@ -67,6 +67,7 @@ const Songs = [
         cover: '../assets/imgs/il_est_ou_l_amour.jpg',
         artist: 'Hervé Antraique',
     },
+
     {
         path: '../assets/audios/ai-covers/herve.mp3',
         displayName: "Hervé",
@@ -145,9 +146,7 @@ document.addEventListener('click', (event) => {
         const title = event.target.children[1].innerText
         const image = event.target.children[0].src
 
-        console.log(
-            `id: ${songId}\ntitle: ${title}\nimg_source: ${image}`
-        )
+        console.log(songId, title, image)
 
 
         const elementHide = document.querySelector('custom-header')
@@ -160,10 +159,40 @@ document.addEventListener('click', (event) => {
         elementShow.style.display = 'flex'
 
 
-        document.querySelector("html").style.overflowY = "hidden";
+        document.querySelector("html").style.overflowY = "none";
 
         const song = Object.values(Songs).find(song => song.displayName === title);
+    
+        if (song) {
+            loadMusic(song);
+            playMusic();
+        } else {
+            console.error("Chanson non trouvée dans Songs !");
+        }
+    } else if (event.target.parentNode.classList.contains('song')) {
 
+        
+        const songId = event.target.parentNode.id //Rajouter parentNode devant si c'est un enfant qui est cliqué
+        const title = event.target.parentNode.children[1].innerText
+        const image = event.target.parentNode.children[0].src
+
+        console.log(songId, title, image)
+
+
+        const elementHide = document.querySelector('custom-header')
+
+        elementHide.style.display = 'none'
+
+
+        const elementShow = document.getElementById('player-container')
+
+        elementShow.style.display = 'flex'
+
+
+        document.querySelector("html").style.overflowY = "none";
+
+        const song = Object.values(Songs).find(song => song.displayName === title);
+    
         if (song) {
             loadMusic(song);
             playMusic();
