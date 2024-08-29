@@ -20,6 +20,22 @@
 
 <body>
     <custom-header></custom-header>
+    <section class="popup">
+        <div class="popup-frame">
+            <h3>Avertissement</h3>
+            <p>
+                Ce site est en bêta et une nouvelle version sera bientôt disponible,<br>
+                des élément sont donc malheureusement indisponibles et je m'en excuse.<br>
+                <br>
+                De nombreux bugs sont également présents et ils seront réglés lord de la prochaine version. <br>
+                <br>
+                Merci de votre compréhension <br>
+                AGIUS Angelo
+            </p>
+            <button id="close-popup">Ok</button>
+            <script src="../scripts/popup.js"></script>
+        </div>
+    </section>
     <section class="main-page">
         <section class="player" id="player-container">
             <div class="container">
@@ -46,9 +62,18 @@
             </div>
             <script src="../scripts/player.js"></script>
         </section>
-        <section class="discover">
-            <section class="yt-music">
-                <h2>Youtube Covers</h2>
+        <section class="discover" id="discover">
+            <section class="playlist" style="display: none;">
+                <div class="playlist-navbar">
+                    <ul>
+                        <li><a href="#yt-music">YouTube Covers</a></li>
+                        <li><a href="#gq-song">Guitar'o Quai</a></li>
+                        <li><a href="#ai-music">AI Songs</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="yt-music" id="yt-music">
+                <h2>YouTube Covers</h2>
                 <div class="yt-song">
                     <div class="song" id="les_main_d_or">
                         <img id="yt-image" src="../assets/imgs/les_main_d_or.jpg" alt="Les main d'or">
@@ -74,23 +99,15 @@
                         <img id="yt-image" src="../assets/imgs/sur_les_quais.jpg" alt="Sur les quais">
                         <div id="yt-title">Sur les quais</div>
                     </div>
-                    <div class="song" id="ma">
-                        <img id="yt-image" src="../assets/imgs/ma.jpg" alt="Ma">
-                        <div id="yt-title">Ma</div>
-                    </div>
-                    <div class="song" id="je_me_suis_fait_tout_petit">
-                        <img id="yt-image" src="../assets/imgs/je_me_suis_fait_tout_petit.jpg" alt="je_me_suis_fait_tout_petit">
-                        <div id="yt-title">Je m'suis fait tout petit</div>
-                    </div>
-                    <div class="song" id="il_est_ou_l_amour">
-                        <img id="yt-image" src="../assets/imgs/il_est_ou_l_amour.jpg" alt="Il est où l'amour">
-                        <div id="yt-title">Il est où l'amour</div>
-                    </div>
                 </div>
             </section>
-            <hr style="height: 40px; border: none; margin: 0;">
-            <section class="ai-music">
-                <div class="ai-not-available">AI Music is not available</div>
+            <section class="gq" id="gq-song">
+                <h2>Guitar'o Quai</h2>
+                <div class="gq-song">
+                    <h1>Prochainement...</h1>
+                </div>
+            </section>
+            <section class="ai-music" id="ai-music">
                 <h2>AI Songs</h2>
                 <div class="ai-song">
                     <div class="song" id="herve">

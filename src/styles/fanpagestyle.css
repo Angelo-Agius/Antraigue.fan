@@ -1,57 +1,57 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(48, 48, 48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(48, 48, 48);
 }
 
 html {
-    overflow-y: hidden;
-    overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .rotate-img {
-    width: 750px;
-    height: 750px;
-    transform: rotate(180deg);
+  width: 750px;
+  height: 750px;
+  transform: rotate(180deg);
 }
 
 .main-page {
-    margin-top: 65px;
+  margin-top: 65px;
 }
 
 @media screen and (max-width: 1000px) {
-    .rotate-img {
-        width: 650px;
-        height: 650px;
-    }
-    .main-page {
-        margin-top: 120px;
-    }
+  .rotate-img {
+    width: 650px;
+    height: 650px;
+  }
+  .main-page {
+    margin-top: 120px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .rotate-img {
-        width: 550px;
-        height: 550px;
-    }
-    .main-page {
-        margin-top: 150px;
-    }
+  .rotate-img {
+    width: 550px;
+    height: 550px;
+  }
+  .main-page {
+    margin-top: 150px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .rotate-img {
-        width: 350px;
-        height: 350px;
-    }
-    .main-page {
-        margin-top: 200px;
-    }
+  .rotate-img {
+    width: 350px;
+    height: 350px;
+  }
+  .main-page {
+    margin-top: 200px;
+  }
 }
